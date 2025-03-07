@@ -9,12 +9,17 @@
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* GroceryAppReactNativeCLITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* GroceryAppReactNativeCLITests.m */; };
 		01F37A753404A1FC211B2724 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		05F06624692D4F6E8427571B /* Okra-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 05F09596BE25494A94B6786B /* Okra-Bold.ttf */; };
 		0C80B921A6F3F58F76C31292 /* libPods-GroceryAppReactNativeCLI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-GroceryAppReactNativeCLI.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-GroceryAppReactNativeCLI-GroceryAppReactNativeCLITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-GroceryAppReactNativeCLI-GroceryAppReactNativeCLITests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		885449D6719D4C3A89712801 /* Okra-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47917BD92EEE41239196440B /* Okra-Medium.ttf */; };
+		D2F199BC34C94043BA56AC1A /* Okra-MediumLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95CBD04A346A4A4E8ADE6B6E /* Okra-MediumLight.ttf */; };
+		FB0F255F3DDA4D1AB0EE72AA /* Okra-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9155E6840E7C45FFBCFA5FFD /* Okra-Regular.ttf */; };
+		FED4C86326F44189B4F06539 /* Okra-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB78460F66544326ACA6FD92 /* Okra-ExtraBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +36,7 @@
 		00E356EE1AD99517003FC87E /* GroceryAppReactNativeCLITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroceryAppReactNativeCLITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* GroceryAppReactNativeCLITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroceryAppReactNativeCLITests.m; sourceTree = "<group>"; };
+		05F09596BE25494A94B6786B /* Okra-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Okra-Bold.ttf"; path = "../src/assets/fonts/Okra-Bold.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* GroceryAppReactNativeCLI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryAppReactNativeCLI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = GroceryAppReactNativeCLI/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = GroceryAppReactNativeCLI/AppDelegate.mm; sourceTree = "<group>"; };
@@ -40,12 +46,16 @@
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = GroceryAppReactNativeCLI/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-GroceryAppReactNativeCLI-GroceryAppReactNativeCLITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GroceryAppReactNativeCLI-GroceryAppReactNativeCLITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4392A12AC88292D35C810B /* Pods-GroceryAppReactNativeCLI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroceryAppReactNativeCLI.debug.xcconfig"; path = "Target Support Files/Pods-GroceryAppReactNativeCLI/Pods-GroceryAppReactNativeCLI.debug.xcconfig"; sourceTree = "<group>"; };
+		47917BD92EEE41239196440B /* Okra-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Okra-Medium.ttf"; path = "../src/assets/fonts/Okra-Medium.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-GroceryAppReactNativeCLI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroceryAppReactNativeCLI.release.xcconfig"; path = "Target Support Files/Pods-GroceryAppReactNativeCLI/Pods-GroceryAppReactNativeCLI.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-GroceryAppReactNativeCLI-GroceryAppReactNativeCLITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroceryAppReactNativeCLI-GroceryAppReactNativeCLITests.debug.xcconfig"; path = "Target Support Files/Pods-GroceryAppReactNativeCLI-GroceryAppReactNativeCLITests/Pods-GroceryAppReactNativeCLI-GroceryAppReactNativeCLITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-GroceryAppReactNativeCLI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GroceryAppReactNativeCLI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = GroceryAppReactNativeCLI/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-GroceryAppReactNativeCLI-GroceryAppReactNativeCLITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroceryAppReactNativeCLI-GroceryAppReactNativeCLITests.release.xcconfig"; path = "Target Support Files/Pods-GroceryAppReactNativeCLI-GroceryAppReactNativeCLITests/Pods-GroceryAppReactNativeCLI-GroceryAppReactNativeCLITests.release.xcconfig"; sourceTree = "<group>"; };
+		9155E6840E7C45FFBCFA5FFD /* Okra-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Okra-Regular.ttf"; path = "../src/assets/fonts/Okra-Regular.ttf"; sourceTree = "<group>"; };
+		95CBD04A346A4A4E8ADE6B6E /* Okra-MediumLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Okra-MediumLight.ttf"; path = "../src/assets/fonts/Okra-MediumLight.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		FB78460F66544326ACA6FD92 /* Okra-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Okra-ExtraBold.ttf"; path = "../src/assets/fonts/Okra-ExtraBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +135,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				A5650C882A6D4B728993B768 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -138,6 +149,19 @@
 				00E356EE1AD99517003FC87E /* GroceryAppReactNativeCLITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A5650C882A6D4B728993B768 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				05F09596BE25494A94B6786B /* Okra-Bold.ttf */,
+				FB78460F66544326ACA6FD92 /* Okra-ExtraBold.ttf */,
+				47917BD92EEE41239196440B /* Okra-Medium.ttf */,
+				95CBD04A346A4A4E8ADE6B6E /* Okra-MediumLight.ttf */,
+				9155E6840E7C45FFBCFA5FFD /* Okra-Regular.ttf */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
@@ -247,6 +271,11 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				01F37A753404A1FC211B2724 /* PrivacyInfo.xcprivacy in Resources */,
+				05F06624692D4F6E8427571B /* Okra-Bold.ttf in Resources */,
+				FED4C86326F44189B4F06539 /* Okra-ExtraBold.ttf in Resources */,
+				885449D6719D4C3A89712801 /* Okra-Medium.ttf in Resources */,
+				D2F199BC34C94043BA56AC1A /* Okra-MediumLight.ttf in Resources */,
+				FB0F255F3DDA4D1AB0EE72AA /* Okra-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
