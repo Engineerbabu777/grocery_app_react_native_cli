@@ -1,17 +1,11 @@
+import {View, Text} from 'react-native';
+import React from 'react';
+import Navigation from '@navigation/Navigation';
 
-
-
-import { View, Text } from 'react-native'
-import React from 'react'
-
-type Props = {}
+type Props = {};
 
 const App = (props: Props) => {
-  return (
-    <View>
-      <Text>App</Text>
-    </View>
-  )
-}
+  return <Navigation />;
+};
 
-export default App
+export default App;
