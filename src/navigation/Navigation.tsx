@@ -3,6 +3,8 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {navigationRef} from '@utils/NavigationUtils';
 import SplashScreen from '@features/auth/SplashScreen';
+import DeliveryLogin from '@features/auth/DeliveryLogin';
+import CustomerLogin from '@features/auth/CustomerLogin';
 
 const Stack = createNativeStackNavigator();
 export default function Navigation() {
@@ -14,8 +16,21 @@ export default function Navigation() {
           headerShown: false,
         }}>
         <Stack.Screen name="SplashScreen" component={SplashScreen} />
+        <Stack.Screen
+          name="DeliveryLogin"
+          component={DeliveryLogin}
+          options={{
+            animation: 'fade',
+          }}
+        />
+        <Stack.Screen
+          name="CustomerLogin"
+          component={CustomerLogin}
+          options={{
+            animation: 'fade',
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
-
