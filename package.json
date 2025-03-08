@@ -10,7 +10,7 @@
     "test": "jest",
     "link:fonts": "npx react-native-asset",
     "postinstall": "npx patch-package",
-    "pod-install":"cd ios && RCT_NEW_ARCH_ENABLED=1 bundle exec pod install"
+    "pod-install": "cd ios && RCT_NEW_ARCH_ENABLED=1 bundle exec pod install"
   },
   "dependencies": {
     "@homielab/react-native-auto-scroll": "^0.0.10",
@@ -32,6 +32,7 @@
     "react-native-rolling-bar": "^1.0.0",
     "react-native-safe-area-context": "^5.3.0",
     "react-native-screens": "^4.9.1",
+    "react-native-svg-transformer": "^1.5.0",
     "react-native-vector-icons": "^10.2.0"
   },
   "devDependencies": {
