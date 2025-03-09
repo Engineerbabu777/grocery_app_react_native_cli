@@ -7,10 +7,9 @@ type Props = {
 };
 export default function CustomSafeAreaView({children, style}: Props) {
   return (
-    <View style={styles.container}>
-      <SafeAreaView />
-      {children}
-    </View>
+    <SafeAreaView style={styles.container}>
+      <View style={[styles.container, style]}>{children}</View>
+    </SafeAreaView>
   );
 }
 

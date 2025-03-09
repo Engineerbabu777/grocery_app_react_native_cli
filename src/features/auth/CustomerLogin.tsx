@@ -1,8 +1,10 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import {
+  Alert,
   Animated,
   Image,
+  Keyboard,
   SafeAreaView,
   StyleSheet,
   Text,
@@ -72,7 +74,21 @@ const CustomerLogin = () => {
     }
   };
 
-  const handleAuth = async () => {};
+  const handleAuth = async () => {
+
+    Keyboard.dismiss();
+    setLoading(true);
+
+    try {
+      
+    } catch (error) {
+      Alert.alert("Login Failed!!")
+    } finally{
+      setLoading(false);
+    }
+  };
+
+
   return (
     <GestureHandlerRootView style={styles.container}>
       <View style={styles.container}>
