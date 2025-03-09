@@ -8,7 +8,7 @@ axios.create({}) creates a reusable instance of Axios, which allows us to define
 BASE_URL is the main endpoint of the backend API.
 This helps avoid repetition when making API calls, as all requests will automatically use this base URL.
 */
-const api = axios.create({
+export const api = axios.create({
   baseURL: BASE_URL,
 });
 

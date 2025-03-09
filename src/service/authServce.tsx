@@ -2,6 +2,7 @@ import axios from 'axios';
 import {BASE_URL} from './config';
 import {tokenStorage} from '@state/storage';
 import {useAuthStore} from './authStore';
+import { api } from './apiInterceptors';
 
 // Helper function to handle errors
 const handleError = (error: any, context: string) => {
@@ -26,7 +27,7 @@ const login = async (
   userType: 'customer' | 'deliveryPartner',
 ) => {
   try {
-    const response = await axios.post(`${BASE_URL}/${endpoint}`, credentials);
+    const response = await api.post(`${BASE_URL}/${endpoint}`, credentials);
 
     if (!response?.data) {
       console.error(`❌ ${userType} Login - Invalid response from server.`);
@@ -84,7 +85,7 @@ export const refreshAccessToken = async () => {
       return;
     }
 
-    const response = await axios.post(`${BASE_URL}/refresh-token`, {
+    const response = await api.post(`${BASE_URL}/refresh-token`, {
       refreshToken,
     });
 
