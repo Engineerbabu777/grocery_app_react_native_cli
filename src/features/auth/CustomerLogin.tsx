@@ -23,6 +23,7 @@ import {RFValue} from 'react-native-responsive-fontsize';
 import {resetAndNavigate} from '@utils/NavigationUtils';
 import useKeyboardOffsetHeight from '@utils/useKeyboardOffsetHeight';
 import LinearGradient from 'react-native-linear-gradient';
+import CustomInput from '@components/ui/CustomInput';
 
 const bottomColors = [...lightColors].reverse();
 const CustomerLogin = () => {
@@ -77,6 +78,7 @@ const CustomerLogin = () => {
 
           <PanGestureHandler onHandlerStateChange={handleGesture}>
             <Animated.ScrollView
+            style={{transform:[{translateY:animatedValue}]}}
               bounces={false}
               keyboardDismissMode={'on-drag'}
               keyboardShouldPersistTaps={'handled'}
@@ -96,6 +98,22 @@ const CustomerLogin = () => {
                   style={{marginTop: 2, marginBottom: 25, opacity: 0.8}}>
                   Log in or sign up
                 </CustomText>
+
+                <CustomInput
+                  onChangeText={text => setPhoneNumber(text.slice(0, 11))}
+                  onClear={() => setPhoneNumber('')}
+                  value={phoneNumber}
+                  placeholder="Enter mobile number"
+                  inputMode="numeric"
+                  left={
+                    <CustomText
+                      style={styles.phoneText}
+                      variant="h6"
+                      fontFamily={Fonts.SemiBold}>
+                      +92
+                    </CustomText>
+                  }
+                />
               </View>
             </Animated.ScrollView>
           </PanGestureHandler>
@@ -156,5 +174,8 @@ const styles = StyleSheet.create({
     width: 50,
     borderRadius: 20,
     marginVertical: 10,
+  },
+  phoneText: {
+    marginLeft: 10,
   },
 });

@@ -12,7 +12,7 @@ import {Colors} from '@utils/Constants';
 
 type Props = {
   left: React.ReactNode;
-  right: boolean;
+  right?: boolean;
   onClear?: () => void;
 };
 
