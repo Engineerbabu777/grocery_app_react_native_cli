@@ -5,11 +5,12 @@ import {useAuthStore} from './authStore';
 
 export const customerLogin = async (phone: string) => {
   try {
-    const response: any = axios.post(`${BASE_URL}/customer/login`, {
+    const response: any = await axios.post(`${BASE_URL}/customer/login`, {
       phone,
     });
 
     const {accessToken, refreshToken, customer} = response.data;
+
     tokenStorage.set('accessToken', accessToken);
     tokenStorage.set('refreshToken', refreshToken);
 
@@ -20,3 +21,4 @@ export const customerLogin = async (phone: string) => {
     console.log('Login Error', error);
   }
 };
+

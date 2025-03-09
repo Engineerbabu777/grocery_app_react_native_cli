@@ -34,8 +34,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   logoImage: {
-    height: screenHeight * 0.7,
-    width: screenWidth * 0.7,
+    height: screenHeight * 0.4,
+    width: screenWidth * 0.4,
     resizeMode: 'contain',
   },
 });

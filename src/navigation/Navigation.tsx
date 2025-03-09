@@ -5,6 +5,7 @@ import {navigationRef} from '@utils/NavigationUtils';
 import SplashScreen from '@features/auth/SplashScreen';
 import DeliveryLogin from '@features/auth/DeliveryLogin';
 import CustomerLogin from '@features/auth/CustomerLogin';
+import ProductDashboard from '@features/dasboard/ProductDashboard';
 
 const Stack = createNativeStackNavigator();
 export default function Navigation() {
@@ -26,6 +27,13 @@ export default function Navigation() {
         <Stack.Screen
           name="CustomerLogin"
           component={CustomerLogin}
+          options={{
+            animation: 'fade',
+          }}
+        />
+        <Stack.Screen
+          name="ProductDashboard"
+          component={ProductDashboard}
           options={{
             animation: 'fade',
           }}

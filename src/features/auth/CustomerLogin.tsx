@@ -5,9 +5,11 @@ import {
   Animated,
   Image,
   Keyboard,
+  Platform,
   SafeAreaView,
   StyleSheet,
   Text,
+  TouchableOpacity,
   View,
 } from 'react-native';
 import {
@@ -27,6 +29,8 @@ import useKeyboardOffsetHeight from '@utils/useKeyboardOffsetHeight';
 import LinearGradient from 'react-native-linear-gradient';
 import CustomInput from '@components/ui/CustomInput';
 import CustomButton from '@components/ui/CustomButton';
+import {customerLogin} from '@service/authServce';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const bottomColors = [...lightColors].reverse();
 const CustomerLogin = () => {
@@ -75,19 +79,18 @@ const CustomerLogin = () => {
   };
 
   const handleAuth = async () => {
-
     Keyboard.dismiss();
     setLoading(true);
 
     try {
-      
+      await customerLogin(phoneNumber);
+      resetAndNavigate('ProductDashboard');
     } catch (error) {
-      Alert.alert("Login Failed!!")
-    } finally{
+      Alert.alert('Login Failed!!');
+    } finally {
       setLoading(false);
     }
   };
-
 
   return (
     <GestureHandlerRootView style={styles.container}>
@@ -153,6 +156,12 @@ const CustomerLogin = () => {
           </CustomText>
           <SafeAreaView />
         </View>
+
+        <TouchableOpacity
+          style={styles.absoluteSwitch}
+          onPress={() => resetAndNavigate('DeliveryLogin')}>
+          <Icon name="bike-fast" size={RFValue(18)} color={'#000'} />
+        </TouchableOpacity>
       </View>
     </GestureHandlerRootView>
   );
@@ -203,5 +212,23 @@ const styles = StyleSheet.create({
   },
   phoneText: {
     marginLeft: 10,
+  },
+  absoluteSwitch: {
+    position: 'absolute',
+    top: Platform.OS === 'ios' ? 50 : 30,
+    backgroundColor: '#fff',
+    zIndex: 99,
+    shadowColor: '#000',
+    shadowOffset: {width: 1, height: 1},
+    shadowOpacity: 0.5,
+    shadowRadius: 12,
+    elevation: 10,
+    padding: 10,
+    borderRadius: 50,
+    height: 55,
+    width: 55,
+    right: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
