@@ -24,6 +24,7 @@ import {resetAndNavigate} from '@utils/NavigationUtils';
 import useKeyboardOffsetHeight from '@utils/useKeyboardOffsetHeight';
 import LinearGradient from 'react-native-linear-gradient';
 import CustomInput from '@components/ui/CustomInput';
+import CustomButton from '@components/ui/CustomButton';
 
 const bottomColors = [...lightColors].reverse();
 const CustomerLogin = () => {
@@ -70,6 +71,8 @@ const CustomerLogin = () => {
       }
     }
   };
+
+  const handleAuth = async () => {};
   return (
     <GestureHandlerRootView style={styles.container}>
       <View style={styles.container}>
@@ -78,7 +81,7 @@ const CustomerLogin = () => {
 
           <PanGestureHandler onHandlerStateChange={handleGesture}>
             <Animated.ScrollView
-            style={{transform:[{translateY:animatedValue}]}}
+              style={{transform: [{translateY: animatedValue}]}}
               bounces={false}
               keyboardDismissMode={'on-drag'}
               keyboardShouldPersistTaps={'handled'}
@@ -100,7 +103,7 @@ const CustomerLogin = () => {
                 </CustomText>
 
                 <CustomInput
-                  onChangeText={text => setPhoneNumber(text.slice(0, 11))}
+                  onChangeText={text => setPhoneNumber(text.slice(0, 10))}
                   onClear={() => setPhoneNumber('')}
                   value={phoneNumber}
                   placeholder="Enter mobile number"
@@ -113,6 +116,13 @@ const CustomerLogin = () => {
                       +92
                     </CustomText>
                   }
+                />
+
+                <CustomButton
+                  disabled={phoneNumber.length !== 10}
+                  onPress={handleAuth}
+                  title="Continue"
+                  loading={loading}
                 />
               </View>
             </Animated.ScrollView>

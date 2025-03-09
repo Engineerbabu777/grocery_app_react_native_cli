@@ -81,7 +81,6 @@ const CustomText = ({
         fontFamilyStyle,
         style,
         {
-          color: Colors.text,
           fontSize: computedFontSize,
         },
       ]}>
