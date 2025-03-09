@@ -21,7 +21,7 @@ export default function ProductSlider() {
         style={styles.autoScroll}>
         <View style={styles.gridContainer}>
           {rows.map((row: any, rowIndex: number) => {
-            return <MemoizedRow row={row} rowIndex={rowIndex} />;
+            return <MemoizedRow row={row} key={rowIndex} rowIndex={rowIndex} />;
           })}
         </View>
       </AutoScroll>
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#f2f2f2',
+    backgroundColor: '#f4f4f4',
   },
   image: {
     width: '100%',
@@ -65,11 +65,12 @@ const MemoizedRow: FC<{row: typeof imageData; rowIndex: number}> = ({
   rowIndex,
 }) => {
   return (
-    <View style={styles.row}>
+    <View style={styles.row} key={rowIndex}>
       {row?.map((image, imageIndex) => {
         const horizontalShift = rowIndex % 2 === 0 ? -18 : 18;
         return (
           <View
+            key={imageIndex}
             style={[
               styles.itemContainer,
               {transform: [{translateX: horizontalShift}]},
