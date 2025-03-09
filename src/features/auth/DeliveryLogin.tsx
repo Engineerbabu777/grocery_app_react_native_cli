@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import {Alert, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {Alert, ScrollView, StyleSheet, View} from 'react-native';
 import React, {useState} from 'react';
 import {deliveryLogin} from '@service/authServce';
 import {resetAndNavigate} from '@utils/NavigationUtils';
