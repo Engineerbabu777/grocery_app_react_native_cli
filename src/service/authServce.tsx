@@ -2,7 +2,7 @@ import axios from 'axios';
 import {BASE_URL} from './config';
 import {tokenStorage} from '@state/storage';
 import {useAuthStore} from './authStore';
-import { api } from './apiInterceptors';
+import {api} from './apiInterceptors';
 
 // Helper function to handle errors
 const handleError = (error: any, context: string) => {
@@ -102,5 +102,25 @@ export const refreshAccessToken = async () => {
     return response.data.refreshToken;
   } catch (error) {
     handleError(error, 'Refresh Token');
+  }
+};
+
+export const getUser = async (setUser: any) => {
+  try {
+    const response = await api.get('/user'); // Fetch user data
+    setUser(response?.data?.user);
+  } catch (error) {
+    console.error('❌ Get User - Failed to fetch user details:', error);
+    return null; // Return null in case of failure
+  }
+};
+
+export const updateUserLocation = async (data: any, setUser: any) => {
+  try {
+    const response = await api.patch(`/user`, data);
+
+    getUser(setUser);
+  } catch (error) {
+    console.log(`Update user location error:- ${error}`);
   }
 };
